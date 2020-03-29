@@ -38,15 +38,12 @@
             args="--namespace=/AJBot
             joint_state_controller
             base_rotation_controller
-            sholder_rotation_controller
+            shoulder_rotation_controller
             elbow_rotation_controller
-            Gripper_position_controller
+            gripper_position_controller
             --timeout 60">
         </node>
         
-        <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
-          <param name="use_gui" value="True"/>
-        </node>
     </group>
           
 </launch>
