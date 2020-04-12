@@ -3,7 +3,6 @@ project(AJTemplateBot)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
-
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -19,8 +18,6 @@ find_package(catkin REQUIRED COMPONENTS
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
-add_executable(end_effector_tf_brodcaster src/end_effector_tf_brodcaster.cpp)
-target_link_libraries(end_effector_tf_brodcaster ${catkin_LIBRARIES})
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -139,6 +136,7 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/AJTemplateBot_node.cpp)
+add_executable(end_effector_tf_brodcaster src/end_effector_tf_brodcaster.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -155,6 +153,7 @@ include_directories(
 #   ${catkin_LIBRARIES}
 # )
 
+target_link_libraries(end_effector_tf_brodcaster ${catkin_LIBRARIES})
 #############
 ## Install ##
 #############
