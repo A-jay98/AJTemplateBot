@@ -3,11 +3,7 @@ Panels:
     Help Height: 78
     Name: Displays
     Property Tree Widget:
-      Expanded:
-        - /Global Options1
-        - /Status1
-        - /RobotModel1
-        - /Axes1
+      Expanded: ~
       Splitter Ratio: 0.5
     Tree Height: 327
   - Class: rviz/Selection
@@ -69,7 +65,37 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        left_gripper:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_tip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         link_01:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_02:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        link_03:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_gripper:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_tip:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -86,6 +112,49 @@ Visualization Manager:
       Name: Axes
       Radius: 0.05000000074505806
       Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        base_link:
+          Value: true
+        end_effector:
+          Value: true
+        left_gripper:
+          Value: true
+        left_tip:
+          Value: true
+        link_01:
+          Value: true
+        link_02:
+          Value: true
+        link_03:
+          Value: true
+        right_gripper:
+          Value: true
+        right_tip:
+          Value: true
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        base_link:
+          link_01:
+            link_02:
+              link_03:
+                end_effector:
+                  {}
+                left_gripper:
+                  left_tip:
+                    {}
+                right_gripper:
+                  right_tip:
+                    {}
+      Update Interval: 0
       Value: true
   Enabled: true
   Global Options:
@@ -152,4 +221,4 @@ Window Geometry:
     collapsed: false
   Width: 1200
   X: 167
-  Y: 63
+  Y: 33

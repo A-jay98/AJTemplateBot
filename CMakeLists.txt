@@ -12,11 +12,15 @@ find_package(catkin REQUIRED COMPONENTS
   controller_manager
   joint_state_controller
   robot_state_publisher
+  tf
+  roscpp
 )
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
+add_executable(end_effector_tf_brodcaster src/end_effector_tf_brodcaster.cpp)
+target_link_libraries(end_effector_tf_brodcaster ${catkin_LIBRARIES})
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
