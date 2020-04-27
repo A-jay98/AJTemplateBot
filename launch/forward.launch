@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <include file="$(find AJTemplateBot)/launch/rviz.launch">
+        <arg name="debug" value="1" />
+    </include>
+
+    <node pkg="AJTemplateBot" type="Forward.py" name="Forward" output="screen"/>
+    
+</launch>
